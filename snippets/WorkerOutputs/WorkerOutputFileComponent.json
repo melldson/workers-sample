@@ -1,0 +1,46 @@
+{
+  "body": {
+    "value": "file",
+    "label": "File",
+    "type": "file",
+    "list_item_type": "",
+    "nested_outputs": [
+      {
+        "value": "id",
+        "label": "ID",
+        "type": "string"
+      },
+      {
+        "value": "link_uid",
+        "label": "Link UID",
+        "type": "string"
+      },
+      {
+        "value": "name",
+        "label": "Name",
+        "type": "string"
+      },
+      {
+        "value": "date",
+        "label": "Date",
+        "type": "date"
+      },
+      {
+        "value": "tags",
+        "label": "Tags",
+        "type": "list",
+        "list_item_type": "string"
+      },
+      {
+        "value": "content_type",
+        "label": "Content Type",
+        "type": "string"
+      },
+      {
+        "value": "data",
+        "label": "Data",
+        "type": "string"
+      }
+    ]
+  }
+}

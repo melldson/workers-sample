@@ -1,0 +1,9 @@
+{
+  "body": {
+    "label": "_DATE_FIELD_LABEL_",
+    "value": "_DATE_FIELD_VALUE_",
+    "type": "date",
+    "list_item_type": "",
+    "nested_outputs": []
+  }
+}

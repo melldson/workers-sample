@@ -1,0 +1,66 @@
+{
+  "body": {
+    "value": "report",
+    "label": "Report",
+    "type": "report",
+    "list_item_type": "",
+    "nested_outputs": [
+      {
+        "value": "id",
+        "label": "ID",
+        "type": "string",
+        "list_item_type": "",
+        "nested_outputs": []
+      },
+      {
+        "value": "name",
+        "label": "Name",
+        "type": "string",
+        "list_item_type": "",
+        "nested_outputs": []
+      },
+      {
+        "value": "workspace",
+        "label": "Workspace",
+        "type": "string",
+        "list_item_type": "",
+        "nested_outputs": []
+      },
+      {
+        "value": "tags",
+        "label": "Tags",
+        "type": "list",
+        "list_item_type": "string",
+        "nested_outputs": []
+      },
+      {
+        "value": "link_uid",
+        "label": "Link UID",
+        "type": "string",
+        "list_item_type": "",
+        "nested_outputs": []
+      },
+      {
+        "value": "date",
+        "label": "Date",
+        "type": "date",
+        "list_item_type": "",
+        "nested_outputs": []
+      },
+      {
+        "value": "url",
+        "label": "URL",
+        "type": "string",
+        "list_item_type": "",
+        "nested_outputs": []
+      },
+      {
+        "value": "shared_url",
+        "label": "Shared URL",
+        "type": "string",
+        "list_item_type": "",
+        "nested_outputs": []
+      }
+    ]
+  }
+}

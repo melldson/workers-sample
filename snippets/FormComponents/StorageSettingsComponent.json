@@ -1,0 +1,153 @@
+{
+  "body": {
+    "id": "storage_settings",
+    "name": "Storage Settings",
+    "type": "assembler",
+    "paddingLeft": 0,
+    "paddingRight": 0,
+    "paddingTop": 0,
+    "paddingBottom": 0,
+    "gridSizeMd": 12,
+    "mandatory": false,
+    "displayName": false,
+    "withoutMessages": false,
+    "fields": [
+      {
+        "id": "storage_mode",
+        "name": "Storage Mode",
+        "placeholder": "Select the storage mode",
+        "helperText": "Select an option to storage the entity.",
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingBottom": 0,
+        "paddingTop": 0,
+        "gridSizeMd": 12,
+        "mandatory": true,
+        "displayName": true,
+        "withoutMessages": false,
+        "variantOptions": [
+          {
+            "label": "Fixed Value",
+            "value": "select"
+          }
+        ],
+        "defaultVariant": "select",
+        "variants": {
+          "select": {
+            "type": "select",
+            "defaultValues": {
+              "select": {
+                "value": "create",
+                "label": "Create"
+              }
+            },
+            "options": [
+              {
+                "value": "transient",
+                "label": "Transient"
+              },
+              {
+                "value": "create",
+                "label": "Create"
+              },
+              {
+                "value": "update",
+                "label": "Update"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "consistency_check",
+        "name": "Enable consistency check by Link UID",
+        "isVisibleFunction": "storage_mode_create",
+        "helperText": "",
+        "tipover": "",
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "gridSizeMd": 12,
+        "displayName": true,
+        "withoutMessages": false,
+        "variantOptions": [
+          {
+            "label": "User Input",
+            "value": "boolean"
+          }
+        ],
+        "defaultVariant": "boolean",
+        "variants": {
+          "boolean": {
+            "inputType": "checkbox",
+            "type": "boolean",
+            "defaultValues": {
+              "value": false
+            }
+          }
+        }
+      },
+      {
+        "id": "validate",
+        "name": "Validate the entity parameters",
+        "isVisibleFunction": "storage_mode_transient",
+        "helperText": "",
+        "tipover": "",
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "gridSizeMd": 12,
+        "displayName": true,
+        "withoutMessages": false,
+        "variantOptions": [
+          {
+            "label": "User Input",
+            "value": "boolean"
+          }
+        ],
+        "defaultVariant": "boolean",
+        "variants": {
+          "boolean": {
+            "inputType": "checkbox",
+            "type": "boolean",
+            "defaultValues": {
+              "value": false
+            }
+          }
+        }
+      },
+      {
+        "id": "create_fallback",
+        "name": "Create entity if it doesn't exist",
+        "isVisibleFunction": "storage_mode_update",
+        "helperText": "",
+        "tipover": "",
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "gridSizeMd": 12,
+        "displayName": true,
+        "withoutMessages": false,
+        "variantOptions": [
+          {
+            "label": "User Input",
+            "value": "boolean"
+          }
+        ],
+        "defaultVariant": "boolean",
+        "variants": {
+          "boolean": {
+            "inputType": "checkbox",
+            "type": "boolean",
+            "defaultValues": {
+              "value": false
+            }
+          }
+        }
+      }
+    ]
+  }
+}

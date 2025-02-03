@@ -1,0 +1,404 @@
+{
+  "body": {
+    "id": "portfolio",
+    "name": "Portfolio",
+    "type": "assembler",
+    "paddingLeft": 0,
+    "paddingRight": 0,
+    "paddingTop": 0,
+    "paddingBottom": 0,
+    "gridSizeMd": 12,
+    "mandatory": false,
+    "displayName": true,
+    "withoutMessages": false,
+    "fields": [
+      {
+        "id": "name",
+        "name": "Name",
+        "placeholder": "Using same from input entity",
+        "tipover": "",
+        "paddingLeft": 4,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "gridSizeMd": 12,
+        "mandatory": false,
+        "displayName": true,
+        "withoutMessages": false,
+        "variantOptions": [
+          {
+            "label": "Template Text",
+            "value": "metaString"
+          },
+          {
+            "label": "Upstream Data",
+            "value": "previousWorkers"
+          }
+        ],
+        "defaultVariant": "metaString",
+        "variants": {
+          "metaString": {
+            "type": "metaString",
+            "helperText": "Set the portfolio name using template text.",
+            "maxLength": 250,
+            "defaultValues": {
+              "select": {
+                "label": "",
+                "value": ""
+              }
+            },
+            "filterType": [
+              "number",
+              "string",
+              "date"
+            ]
+          },
+          "previousWorkers": {
+            "type": "nestedAttributes",
+            "helperText": "Select the portfolio name from a previous worker.",
+            "defaultValues": {
+              "select": {
+                "label": "",
+                "value": ""
+              }
+            },
+            "options": [],
+            "filterType": [
+              "string"
+            ]
+          }
+        }
+      },
+      {
+        "id": "workspace",
+        "name": "Workspace",
+        "permission": "workflows.save_source_code",
+        "placeholder": "Using current workspace",
+        "tipover": "",
+        "paddingLeft": 4,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "gridSizeMd": 6,
+        "mandatory": false,
+        "displayName": true,
+        "withoutMessages": false,
+        "variantOptions": [
+          {
+            "label": "Fixed Workspace",
+            "value": "selectWorkspace"
+          },
+          {
+            "label": "Upstream Data",
+            "value": "previousWorkers"
+          }
+        ],
+        "defaultVariant": "selectWorkspace",
+        "variants": {
+          "selectWorkspace": {
+            "type": "selectRemoteData",
+            "resultVariable": "workspaces",
+            "url": "workspaces",
+            "link": "workspaces",
+            "helperText": "Select an existing workspace.",
+            "defaultValues": {
+              "select": {
+                "label": "",
+                "value": ""
+              }
+            }
+          },
+          "previousWorkers": {
+            "type": "nestedAttributes",
+            "helperText": "Select the workspace from a previous worker.",
+            "defaultValues": {
+              "select": {
+                "label": "",
+                "value": ""
+              }
+            },
+            "options": [],
+            "filterType": [
+              "string"
+            ]
+          }
+        }
+      },
+      {
+        "id": "date",
+        "name": "Date",
+        "placeholder": "Using same from input entity",
+        "tipover": "",
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "gridSizeMd": 6,
+        "mandatory": false,
+        "displayName": true,
+        "withoutMessages": false,
+        "variantOptions": [
+          {
+            "label": "Fixed Date",
+            "value": "date"
+          },
+          {
+            "label": "Upstream Data",
+            "value": "previousWorkers"
+          }
+        ],
+        "defaultVariant": "date",
+        "variants": {
+          "date": {
+            "type": "date",
+            "helperText": "Set or select the portfolio date.",
+            "defaultValues": {
+              "value": ""
+            }
+          },
+          "previousWorkers": {
+            "type": "nestedAttributes",
+            "helperText": "Select the portfolio date from a previous worker.",
+            "defaultValues": {
+              "select": {
+                "label": "",
+                "value": ""
+              }
+            },
+            "options": [],
+            "filterType": [
+              "date"
+            ]
+          }
+        }
+      },
+      {
+        "id": "nlv",
+        "name": "Net Liquidating Value (NLV)",
+        "placeholder": "Using same from input entity",
+        "tipover": "",
+        "paddingLeft": 4,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "gridSizeMd": 6,
+        "mandatory": false,
+        "displayName": true,
+        "withoutMessages": false,
+        "variantOptions": [
+          {
+            "label": "Fixed NLV",
+            "value": "number"
+          },
+          {
+            "label": "Upstream Data",
+            "value": "previousWorkers"
+          }
+        ],
+        "defaultVariant": "number",
+        "variants": {
+          "number": {
+            "type": "number",
+            "helperText": "Set the portfolio NLV with a fixed number.",
+            "defaultValues": {
+              "value": ""
+            }
+          },
+          "previousWorkers": {
+            "type": "nestedAttributes",
+            "helperText": "Select the portfolio NLV from a previous worker.",
+            "defaultValues": {
+              "select": {
+                "label": "",
+                "value": ""
+              }
+            },
+            "options": [],
+            "filterType": [
+              "number"
+            ]
+          }
+        }
+      },
+      {
+        "id": "base_currency",
+        "name": "Base Currency",
+        "placeholder": "Using same from input entity",
+        "tipover": "",
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "gridSizeMd": 6,
+        "mandatory": false,
+        "displayName": true,
+        "withoutMessages": false,
+        "variantOptions": [
+          {
+            "label": "Fixed Currency",
+            "value": "select"
+          },
+          {
+            "label": "Upstream Data",
+            "value": "previousWorkers"
+          }
+        ],
+        "defaultVariant": "select",
+        "variants": {
+          "select": {
+            "type": "select",
+            "optionsSource": "currencies",
+            "helperText": "Set the portfolio base currency.",
+            "defaultValues": {
+              "select": {
+                "label": "",
+                "value": ""
+              }
+            }
+          },
+          "previousWorkers": {
+            "type": "nestedAttributes",
+            "helperText": "Select the portfolio base currency from a previous worker.",
+            "defaultValues": {
+              "select": {
+                "label": "",
+                "value": ""
+              }
+            },
+            "options": [],
+            "filterType": [
+              "string"
+            ]
+          }
+        }
+      },
+      {
+        "id": "link_uid",
+        "name": "Link UID",
+        "placeholder": "Using same from input entity",
+        "tipover": "",
+        "paddingLeft": 4,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "gridSizeMd": 12,
+        "mandatory": false,
+        "displayName": true,
+        "withoutMessages": false,
+        "variantOptions": [
+          {
+            "label": "Template Text",
+            "value": "metaString"
+          },
+          {
+            "label": "Upstream Data",
+            "value": "previousWorkers"
+          }
+        ],
+        "defaultVariant": "metaString",
+        "variants": {
+          "metaString": {
+            "type": "metaString",
+            "helperText": "Set the portfolio Link UID using template text.",
+            "maxLength": 250,
+            "defaultValues": {
+              "select": {
+                "label": "",
+                "value": ""
+              }
+            },
+            "filterType": [
+              "number",
+              "string",
+              "date"
+            ]
+          },
+          "previousWorkers": {
+            "type": "nestedAttributes",
+            "helperText": "Select the portfolio Link UID from a previous worker.",
+            "defaultValues": {
+              "select": {
+                "label": "",
+                "value": ""
+              }
+            },
+            "options": [],
+            "filterType": [
+              "string"
+            ]
+          }
+        }
+      },
+      {
+        "id": "tags",
+        "type": "assembler",
+        "addLabel": "Add Tag",
+        "min": 1,
+        "max": 10,
+        "paddingLeft": 4,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "gridSizeMd": 12,
+        "multiple": true,
+        "mandatory": false,
+        "displayName": true,
+        "withoutMessages": 1,
+        "fields": [
+          {
+            "id": "tag",
+            "name": "Tags",
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "gridSizeMd": 12,
+            "variantOptions": [
+              {
+                "label": "Fixed Tags",
+                "value": "tag"
+              },
+              {
+                "label": "Upstream Data",
+                "value": "previousWorkers"
+              }
+            ],
+            "defaultVariant": "tag",
+            "variants": {
+              "tag": {
+                "type": "tag",
+                "validation": "hashtag",
+                "placeholder": "Add multiple tags separating them with spaces",
+                "defaultValues": {
+                  "value": []
+                }
+              },
+              "previousWorkers": {
+                "type": "nestedAttributes",
+                "placeholder": "Select the tags from a previous worker",
+                "defaultValues": {
+                  "select": {
+                    "label": "",
+                    "value": ""
+                  }
+                },
+                "options": [],
+                "filterType": [
+                  "list",
+                  "string",
+                  "date",
+                  "number"
+                ],
+                "listFilterType": [
+                  "string",
+                  "date",
+                  "number"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

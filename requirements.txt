@@ -1,0 +1,4 @@
+requests==2.31.0
+python-dotenv==1.0.1
+everysk-beta==1.5.1240
+coverage==7.5.0

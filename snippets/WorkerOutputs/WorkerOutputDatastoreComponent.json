@@ -1,0 +1,42 @@
+{
+  "body": {
+    "value": "datastore",
+    "label": "Datastore",
+    "type": "datastore",
+    "list_item_type": "",
+    "nested_outputs": [
+      {
+        "value": "id",
+        "label": "ID",
+        "type": "string"
+      },
+      {
+        "value": "name",
+        "label": "Name",
+        "type": "string"
+      },
+      {
+        "type": "date",
+        "label": "Date",
+        "value": "date"
+      },
+      {
+        "value": "link_uid",
+        "label": "Link UID",
+        "type": "string"
+      },
+      {
+        "value": "tags",
+        "label": "Tags",
+        "type": "list",
+        "list_item_type": "string"
+      },
+      {
+        "value": "data",
+        "label": "Data",
+        "type": "list",
+        "list_item_type": "list"
+      }
+    ]
+  }
+}

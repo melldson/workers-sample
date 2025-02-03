@@ -1,0 +1,43 @@
+{
+  "body": {
+    "id": "portfolio",
+    "name": "Portfolio",
+    "placeholder": "",
+    "tipover": "",
+    "paddingLeft": 0,
+    "paddingRight": 0,
+    "paddingTop": 0,
+    "paddingBottom": 0,
+    "gridSizeMd": 12,
+    "mandatory": true,
+    "displayName": true,
+    "withoutMessages": false,
+    "variantOptions": [
+      {
+        "label": "Upstream Data",
+        "value": "previousWorkers"
+      }
+    ],
+    "defaultVariant": "previousWorkers",
+    "variants": {
+      "previousWorkers": {
+        "type": "nestedAttributes",
+        "helperText": "Select a portfolio or a list of portfolios from a previous worker.",
+        "defaultValues": {
+          "select": {
+            "label": "",
+            "value": ""
+          }
+        },
+        "options": [],
+        "filterType": [
+          "list",
+          "portfolio"
+        ],
+        "listFilterType": [
+          "portfolio"
+        ]
+      }
+    }
+  }
+}

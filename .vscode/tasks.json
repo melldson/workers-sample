@@ -1,0 +1,75 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Everysk - Create Folder Structure",
+            "type": "shell",
+            "command": "${workspaceFolder}/scripts/utils.sh",
+            "args": [ "create", "${input:folderName}" ],
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Everysk - DEBUG Worker",
+            "type": "shell",
+            "command": "${workspaceFolder}/run.sh",
+            "args": [ "debug", "${input:folderName}" ],
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Everysk - TESTS",
+            "type": "shell",
+            "command": "${workspaceFolder}/run.sh",
+            "args": [ "tests", "${input:folderName}" ],
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Everysk - DELETE Worker",
+            "type": "shell",
+            "command": "${workspaceFolder}/run.sh",
+            "args": [ "delete", "${input:folderName}" ],
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Everysk - DEPLOY Worker",
+            "type": "shell",
+            "command": "${workspaceFolder}/run.sh",
+            "args": [ "deploy", "${input:folderName}" ],
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Everysk - COVERAGE",
+            "type": "shell",
+            "command": "${workspaceFolder}/scripts/run.sh",
+            "args": [ "deploy", "${input:folderName}" ],
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": []
+        }
+    ],
+    "inputs": [
+        {
+            "id": "folderName",
+            "type": "promptString",
+            "description": "Folder name of the worker template.",
+            "default": ""
+        },
+    ]
+}
