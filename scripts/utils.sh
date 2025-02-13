@@ -19,6 +19,6 @@ case $1 in
         create_folder_structure "$2"
     ;;
     *)
-        echo "Invalid argument."
+        echo "Invalid argument. "
     ;;
 esac
